@@ -53,7 +53,7 @@ Ensure that Node.js and MongoDB are properly set up and configured on your machi
 
 To run the application locally, please follow these steps:
 
-1. Clone the project repository: `git clone <repository_url>`
+1. Clone the project repository: `git clone https://github.com/drishya-dobriyal/travel-booking`
 2. Navigate to the project directory: `cd travel-booking`
 3. Set up the backend server:
    - Navigate to the backend directory: `cd backend`
