@@ -5,6 +5,7 @@ import { Box, ChakraProvider } from "@chakra-ui/react";
 import "./App.css";
 import Navigation from "./components/Navigation";
 import CreateBookingForm from "./components/CreateBookingForm";
+import BookingDetails from "./components/BookingDetails";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
               path="/booking-form"
               element={<CreateBookingForm />}
             ></Route>
-            <Route path="/booking-details"></Route>
+            <Route path="/booking-details" element={<BookingDetails />}></Route>
           </Routes>
         </Router>
       </Box>

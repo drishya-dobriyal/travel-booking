@@ -95,7 +95,7 @@ function CreateBookingForm() {
       margin="auto"
     >
       <FormControl isInvalid={!!error}>
-        <FormLabel color="blue.500" fontSize="xl">
+        <FormLabel color="teal.500" fontSize="xl">
           Name
         </FormLabel>
         <Input
@@ -106,7 +106,7 @@ function CreateBookingForm() {
           size="lg"
         />
 
-        <FormLabel color="blue.500" fontSize="xl">
+        <FormLabel color="teal.500" fontSize="xl">
           Email
         </FormLabel>
         <Input
@@ -117,7 +117,7 @@ function CreateBookingForm() {
           size="lg"
         />
 
-        <FormLabel color="blue.500" fontSize="xl">
+        <FormLabel color="teal.500" fontSize="xl">
           Select Place
         </FormLabel>
         <Select
@@ -133,7 +133,7 @@ function CreateBookingForm() {
         </Select>
         <Flex>
           <Flex direction="column" mr={4}>
-            <FormLabel color="blue.500" fontSize="xl">
+            <FormLabel color="teal.500" fontSize="xl">
               Travellers
             </FormLabel>
             <NumberInput
@@ -152,7 +152,7 @@ function CreateBookingForm() {
             </NumberInput>
           </Flex>
           <Flex direction="column" mr={4}>
-            <FormLabel color="blue.500" fontSize="xl">
+            <FormLabel color="teal.500" fontSize="xl">
               Per Person Budget
             </FormLabel>
             <NumberInput
@@ -170,7 +170,7 @@ function CreateBookingForm() {
             </NumberInput>
           </Flex>
           <Flex direction="column">
-            <FormLabel color="blue.500" fontSize="xl">
+            <FormLabel color="teal.500" fontSize="xl">
               Currency
             </FormLabel>
             <Input
@@ -186,7 +186,7 @@ function CreateBookingForm() {
         <FormErrorMessage color="red.500" mt={2} fontSize="lg">
           {error}
         </FormErrorMessage>
-        <Button type="submit" colorScheme="blue" size="lg" mt={4}>
+        <Button type="submit" colorScheme="teal" size="lg" mt={4}>
           Submit
         </Button>
       </FormControl>
