@@ -1,12 +1,12 @@
 const sinon = require("sinon");
 const { expect } = require("chai");
+
 const {
   home,
   create,
-  setBookingModel,
+  fetchAllBooking,
 } = require("../controllers/bookingController");
 const Booking = require("../models/booking");
-
 describe("home function", () => {
   it("should send a welcome message", () => {
     const res = {
@@ -119,5 +119,56 @@ describe("create function", () => {
     ).to.be.true;
 
     createStub.restore();
+  });
+});
+
+describe("fetchAllBooking", () => {
+  it("should fetch all bookings and return success response", async () => {
+    const fakeBookings = [
+      { name: "Booking 1" },
+      { name: "Booking 2" },
+      { name: "Booking 3" },
+    ];
+
+    const findStub = sinon.stub(Booking, "find").resolves(fakeBookings);
+
+    const res = {
+      status: sinon.stub().returnsThis(),
+      send: sinon.stub(),
+    };
+
+    await fetchAllBooking({}, res);
+
+    expect(res.status.calledWith(200)).to.be.true;
+    expect(res.send.calledOnce).to.be.true;
+    expect(res.send.args[0][0]).to.deep.equal({
+      status: "Success",
+      message: "All booking are fetched",
+      bookings: fakeBookings,
+    });
+
+    findStub.restore();
+  });
+
+  it("should handle internal server error and return failed response", async () => {
+    const findStub = sinon
+      .stub(Booking, "find")
+      .throws(new Error("Database error"));
+
+    const res = {
+      status: sinon.stub().returnsThis(),
+      json: sinon.stub(),
+    };
+
+    await fetchAllBooking({}, res);
+
+    expect(res.status.calledWith(500)).to.be.true;
+    expect(res.json.calledOnce).to.be.true;
+    expect(res.json.args[0][0]).to.deep.equal({
+      status: "Failed",
+      message: "Internal Server Error",
+    });
+
+    findStub.restore();
   });
 });

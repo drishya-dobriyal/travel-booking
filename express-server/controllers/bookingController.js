@@ -30,6 +30,22 @@ module.exports.create = async function (req, res) {
   }
 };
 
+module.exports.fetchAllBooking = async function (req, res) {
+  try {
+    const bookings = await Booking.find({});
+    return res.status(200).send({
+      status: "Success",
+      message: "All booking are fetched",
+      bookings,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      status: "Failed",
+      message: "Internal Server Error",
+    });
+  }
+};
+
 module.exports.setBookingModel = function (model) {
   Booking = model;
 };

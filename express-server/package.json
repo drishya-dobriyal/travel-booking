@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "nodemon start",
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "nyc --reporter=html mocha"
   },
   "keywords": [],
   "author": "",
