@@ -38,7 +38,7 @@ export default function BookingDetails() {
   return (
     <Wrap spacing={4} justify="center">
       {bookings.map((booking) => (
-        <WrapItem key={booking.id}>
+        <WrapItem key={booking._id}>
           <BookingCard booking={booking} />
         </WrapItem>
       ))}
