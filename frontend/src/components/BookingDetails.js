@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { VStack, Text, Spinner, Wrap, WrapItem } from "@chakra-ui/react";
 import BookingCard from "./BookingCard";
 
-function BookingDetails() {
+export default function BookingDetails() {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -45,5 +45,3 @@ function BookingDetails() {
     </Wrap>
   );
 }
-
-export default BookingDetails;

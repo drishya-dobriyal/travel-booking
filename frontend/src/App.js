@@ -7,7 +7,7 @@ import CreateBookingForm from "./components/CreateBookingForm";
 import BookingDetails from "./components/BookingDetails";
 import Home from "./components/Home";
 
-function App() {
+export default function App() {
   return (
     <ChakraProvider>
       <Box>
@@ -27,5 +27,3 @@ function App() {
     </ChakraProvider>
   );
 }
-
-export default App;

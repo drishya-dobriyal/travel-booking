@@ -9,7 +9,7 @@ const {
 const Booking = require("../models/booking");
 
 describe("bookingController", () => {
-  describe("home function", () => {
+  describe("home", () => {
     it("should send a welcome message", () => {
       const res = {
         send: sinon.stub(),
@@ -25,7 +25,7 @@ describe("bookingController", () => {
     });
   });
 
-  describe("create function", () => {
+  describe("create", () => {
     it("should create a booking and send a success message", async () => {
       const req = {
         body: {

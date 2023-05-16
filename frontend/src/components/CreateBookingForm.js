@@ -7,11 +7,6 @@ import {
   Input,
   Button,
   Select,
-  NumberInput,
-  NumberInputField,
-  NumberInputStepper,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
   useToast,
   Box,
 } from "@chakra-ui/react";
@@ -46,7 +41,7 @@ function CreateBookingForm() {
         });
         const data = await response.json();
         console.log(data);
-        if (data.status == "Failed") {
+        if (data.status === "Failed") {
           setError(data.message);
         } else {
           toast({
@@ -135,38 +130,24 @@ function CreateBookingForm() {
             <FormLabel color="teal.500" fontSize="xl">
               Travellers
             </FormLabel>
-            <NumberInput
-              defaultValue={1}
-              min={1}
+            <Input
+              type="number"
               value={travellers}
               onChange={(e) => setTravellers(e.target.value)}
               onClick={clearError}
               size="lg"
-            >
-              <NumberInputField />
-              <NumberInputStepper>
-                <NumberIncrementStepper />
-                <NumberDecrementStepper />
-              </NumberInputStepper>
-            </NumberInput>
+            ></Input>
           </Flex>
           <Flex direction="column" mr={4}>
             <FormLabel color="teal.500" fontSize="xl">
               Per Person Budget
             </FormLabel>
-            <NumberInput
-              defaultValue={0}
+            <Input
               onClick={clearError}
               size="lg"
               value={per_person_cost}
               onChange={(e) => setPerPersonCost(e.target.value)}
-            >
-              <NumberInputField />
-              <NumberInputStepper>
-                <NumberIncrementStepper />
-                <NumberDecrementStepper />
-              </NumberInputStepper>
-            </NumberInput>
+            ></Input>
           </Flex>
           <Flex direction="column">
             <FormLabel color="teal.500" fontSize="xl">

@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Text, Flex } from "@chakra-ui/react";
 
-function BookingCard({ booking }) {
+export default function BookingCard({ booking }) {
   return (
     <Box
       borderWidth="1px"
@@ -45,5 +45,3 @@ function BookingCard({ booking }) {
     </Box>
   );
 }
-
-export default BookingCard;

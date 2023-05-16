@@ -1,7 +1,7 @@
 import { List, ListItem, Link, Box } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 
-function Navigation() {
+export default function Navigation() {
   return (
     <Box bg="gray.200" p={4}>
       <List display="flex" justifyContent="center" alignItems="center">
@@ -12,7 +12,7 @@ function Navigation() {
             color="teal.500"
             fontWeight="bold"
             fontSize="xl"
-            _hover={{ color: "teal.600" }}
+            _hover={{ color: "teal.900" }}
           >
             Home
           </Link>
@@ -24,7 +24,7 @@ function Navigation() {
             color="teal.500"
             fontWeight="bold"
             fontSize="xl"
-            _hover={{ color: "teal.600" }}
+            _hover={{ color: "teal.900" }}
           >
             Booking Form
           </Link>
@@ -36,7 +36,7 @@ function Navigation() {
             color="teal.500"
             fontWeight="bold"
             fontSize="xl"
-            _hover={{ color: "teal.600" }}
+            _hover={{ color: "teal.900" }}
           >
             Booking Details
           </Link>
@@ -45,5 +45,3 @@ function Navigation() {
     </Box>
   );
 }
-
-export default Navigation;
