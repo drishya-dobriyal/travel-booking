@@ -20,6 +20,7 @@ const BookingSchema = new mongoose.Schema({
   per_person_cost: {
     type: Number,
     float: true,
+    required: true,
   },
   currency: {
     type: String,

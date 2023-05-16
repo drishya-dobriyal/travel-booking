@@ -45,7 +45,3 @@ module.exports.fetchAllBooking = async function (req, res) {
     });
   }
 };
-
-module.exports.setBookingModel = function (model) {
-  Booking = model;
-};
