@@ -1,6 +1,6 @@
 let Booking = require("../models/booking");
 
-module.exports.home = function (req, res) {
+module.exports.home = async function (req, res) {
   return res.send({
     status: "Success",
     message: "Welcome to the world of travelling",

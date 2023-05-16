@@ -170,7 +170,6 @@ describe("bookingController", () => {
         status: "Failed",
         message: "Internal Server Error",
       });
-
       findStub.restore();
     });
   });

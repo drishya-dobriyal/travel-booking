@@ -8,6 +8,18 @@ function Navigation() {
         <ListItem mx={2}>
           <Link
             as={RouterLink}
+            to="/"
+            color="teal.500"
+            fontWeight="bold"
+            fontSize="xl"
+            _hover={{ color: "teal.600" }}
+          >
+            Home
+          </Link>
+        </ListItem>
+        <ListItem mx={2}>
+          <Link
+            as={RouterLink}
             to="/booking-form"
             color="teal.500"
             fontWeight="bold"

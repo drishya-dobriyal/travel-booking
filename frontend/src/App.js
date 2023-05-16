@@ -2,10 +2,10 @@ import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import { Box, ChakraProvider } from "@chakra-ui/react";
-import "./App.css";
 import Navigation from "./components/Navigation";
 import CreateBookingForm from "./components/CreateBookingForm";
 import BookingDetails from "./components/BookingDetails";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Router>
           <Navigation />
           <Routes>
-            <Route exact path="/"></Route>
+            <Route exact path="/" element={<Home />}></Route>
             <Route
               exact
               path="/booking-form"
