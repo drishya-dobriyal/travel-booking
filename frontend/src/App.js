@@ -1,7 +1,12 @@
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import "./App.css";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <ChakraProvider>
+      <Box></Box>
+    </ChakraProvider>
+  );
 }
 
 export default App;
