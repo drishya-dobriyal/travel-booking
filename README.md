@@ -56,7 +56,7 @@ To run the application locally, please follow these steps:
 1. Clone the project repository: `git clone https://github.com/drishya-dobriyal/travel-booking`
 2. Navigate to the project directory: `cd travel-booking`
 3. Set up the backend server:
-   - Navigate to the backend directory: `cd backend`
+   - Navigate to the backend directory: `cd express-server`
    - Install the dependencies: `npm install`
    - Configure the database connection and environment variables.
    - Start the backend server: `npm start`
